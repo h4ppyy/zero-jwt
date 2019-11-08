@@ -12,4 +12,7 @@ def bodyParser(body):
 
 def log(key, val):
     if settings.DEBUG_LOG == True:
-        print('{key} : '.format(key=key) + val)
+        try:
+            print('{key} : '.format(key=key), val)
+        except BaseException:
+            print(val)

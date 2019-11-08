@@ -9,6 +9,9 @@ ALLOWED_HOSTS = []
 DEBUG = True
 DEBUG_LOG = True
 
+JWT_SECRET_KEY = 'secret'
+JWT_ALGORITHM  = 'HS256'
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -32,7 +35,7 @@ MIDDLEWARE = [
 ]
 
 
-ROOT_URLCONF = 'jwt.urls'
+ROOT_URLCONF = 'zero.urls'
 
 
 TEMPLATES = [
@@ -52,7 +55,7 @@ TEMPLATES = [
 ]
 
 
-WSGI_APPLICATION = 'jwt.wsgi.application'
+WSGI_APPLICATION = 'zero.wsgi.application'
 
 
 DATABASES = {
