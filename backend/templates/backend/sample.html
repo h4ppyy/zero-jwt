@@ -11,17 +11,21 @@
     <div class='login-status-top'>
       현재 로그인 아이디
     </div>
-    <div class='login-status-bot'>
+    <div class='login-status-bot' id='login_id'>
       NULL
     </div>
     <div class="tac">
-      <button type="button" class="btn btn-dark">랜덤 로그인</button>
-      <button type="button" class="btn btn-dark">로그아웃</button>
+      <button type="button" class="btn btn-dark" onclick='randomLogin()'>랜덤 로그인</button>
+      <button type="button" class="btn btn-dark" onclick='logout()'>로그아웃</button>
     </div>
   </div>
   <div class='xfileDiv'>
     <input type="file" class="form-control-file xfile" id="input_file">
   </div>
+  <div class='send-file'>
+    <button type="button" class="btn btn-outline-dark" onclick='sendFile()'>파일전송</button>
+  </div>
 </body>
 <script src="/static/backend/vendor/jquery.js"></script>
+<script src="/static/backend/sample.js"></script>
 </html>

@@ -12,6 +12,7 @@ DEBUG_LOG = True
 JWT_SECRET_KEY = 'secret'
 JWT_ALGORITHM  = 'HS256'
 
+UPLOAD_ROOT = BASE_DIR + '/upload/' 
 
 INSTALLED_APPS = [
     'django.contrib.admin',
