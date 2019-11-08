@@ -12,7 +12,7 @@ from backend.models import *
 
 @csrf_exempt
 def sample(request):
-    return JsonResponse({'result': 200})
+    return render(request, 'backend/sample.html')
 
 
 # curl -XPOST http://127.0.0.1:8000/api/v1/login -H 'Content-Type: application/json' -d '{"user_id":"hello", "user_pw":"world"}'

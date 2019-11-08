@@ -1,0 +1,35 @@
+body {
+    background: #dadada !important;
+}
+.container {
+  margin-top: 100px;
+}
+.tac {
+  text-align: center;
+}
+.login-status-top {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+}
+.login-status-bot {
+  text-align: center;
+  margin-top: 6px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.xfileDiv {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.xfile {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  border: solid 1px #b5b5b5;
+  border-radius: 5px;
+  font-size: 10px;
+  text-align: center;
+}
