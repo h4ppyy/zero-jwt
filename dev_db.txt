@@ -1,0 +1,8 @@
+데이터베이스 접속
+sqlite3 db.sqlite3
+
+테이블조회
+.table
+
+마이그레이션 데이터 조회
+select * from django_migrations;

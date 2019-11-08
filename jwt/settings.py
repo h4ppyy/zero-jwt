@@ -3,10 +3,11 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '4g)qb_((sc&=1hynjt_lm*rv^hrb_oroaa=k2hs66(ptsgxypm'
+ALLOWED_HOSTS = []
 
 
 DEBUG = True
-ALLOWED_HOSTS = []
+DEBUG_LOG = True
 
 
 INSTALLED_APPS = [
@@ -16,6 +17,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'backend'
 ]
 
 
