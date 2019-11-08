@@ -16,3 +16,8 @@ http://127.0.0.1:8000
 ```bash
 curl -XPOST http://127.0.0.1:8000/api/v1/regist -H 'Content-Type: application/json' -d '{"user_id":"your_id", "user_pw":"your_password"}'
 ```
+
+### curl test (login)
+```bash
+curl -XPOST http://127.0.0.1:8000/api/v1/login -H 'Content-Type: application/json' -d '{"user_id":"hello", "user_pw":"world"}'
+```
