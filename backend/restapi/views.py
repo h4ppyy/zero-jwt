@@ -76,6 +76,52 @@ def regist(request):
         return JsonResponse({'code': 400, 'msg': 'This is a user who is already'})
 
 
+
+# curl -XPOST http://127.0.0.1:8000/api/v1/regist -H 'Content-Type: application/json' -d '{"user_id":"hello", "user_pw":"world"}'
+@csrf_exempt
+def database(request):
+    # Verify the validity of the back-end
+    token = request.POST.get('token')
+    try:
+        jwt.decode(token, settings.JWT_SECRET_KEY, settings.JWT_ALGORITHM)
+    except BaseException:
+        return JsonResponse({'code': 403, 'msg': 'not auth'})
+
+    # Prevent duplicate membership
+    user = TbUserData.objects.filter(dateTime = dateTime)
+    if len(user) == 0:
+        user = TbUserData(
+            dateTime = dateTime,
+            timestamp = timestamp,
+            accleX = accleX,
+            accleY = accleY,
+            accleZ = accleZ,
+            roll = roll,
+            pitch = pitch,
+            azimuth = azimuth,
+            gyroX = gyroX,
+            gyroY = gyroY,
+            gyroZ = gyroZ,
+            gpsLat = gpsLat,
+            gpsLon = gpsLon,
+            gpsAlt = gpsAlt,
+            gpsAcc = gpsAcc,
+            gpsTime = gpsTime,
+            NgpsLat = NgpsLat,
+            NgpsLon = NgpsLon,
+            NgpsAlt = NgpsAlt,
+            NgpsAcc = NgpsAcc,
+            NgpsTime = NgpsTime,
+            regist_date = datetime.datetime.now(),
+            update_date = None,
+            delete_date = None,
+            delete_yn = 'N',
+        )
+        user.save()
+        return JsonResponse({'code': 200, 'msg': 'Your membership has been completed'})
+    else:
+        return JsonResponse({'code': 400, 'msg': 'This is a user who is already'})
+
 @csrf_exempt
 def randomLogin(request):
     users = TblUser.objects.all()

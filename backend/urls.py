@@ -11,4 +11,6 @@ urlpatterns = [
     path('api/v1/saveFile', restApiViews.saveFile, name='saveFile'),
 
     path('test/randomLogin', restApiViews.randomLogin, name='randomLogin'),
+    
+    path('api/v1/saveValue', restApiViews.saveValue, name='saveValue'),
 ]
